@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title}"></title>
+    <link rel="stylesheet" th:href="@{/css/styleTable.css}">
+    <link rel="stylesheet" th:href="@{/css/styleButton.css}">
+</head>
+<body>
+<h1 th:text="${subtitle}"></h1>
+<table id="customers">
+    <tr class="headerTable">
+        <th>Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Actions</th>
+    </tr>
+
+    <tbody>
+    <tr th:each="user : ${usersFrontend}">
+        <td th:text="${user.userId}"></td>
+        <td th:text="${user.firstName}"></td>
+        <td th:text="${user.lastName}"></td>
+        <td><input type="submit" value="Modificar" class="myButton">
+            <input type="submit" value="Eliminar" class="myButton"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
