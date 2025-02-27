@@ -19,6 +19,10 @@ h1 {
     font-family: sans-serif;
 }
 
+.itemsHeader {
+    font-size: 30px;
+}
+
 #customers td, #customers th {
     border: 1px solid #ddd;
     padding: 8px;
