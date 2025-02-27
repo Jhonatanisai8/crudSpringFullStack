@@ -5,11 +5,19 @@
     <title th:text="${title}"></title>
     <link rel="stylesheet" th:href="@{/css/styleTable.css}">
     <link rel="stylesheet" th:href="@{/css/styleButton.css}">
+    <link rel="stylesheet" th:href="@{/css/styleNav.css}">
 </head>
 <body>
+<nav id='menu'>
+    <input type='checkbox' id='responsive-menu'><label></label>
+    <ul>
+        <li><a href='http://'>Save User</a></li>
+        <li><a href='http://'>User Alls</a></li>
+    </ul>
+</nav>
+
 <h1 th:text="${subtitle}"></h1>
 <table id="customers">
-
     <div class="headerTable">
         <tr>
             <th>Id</th>
