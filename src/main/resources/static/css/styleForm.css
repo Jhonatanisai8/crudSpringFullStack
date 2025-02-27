@@ -74,13 +74,15 @@ div {
     right: -20px;
     background: #50505a;
     color: #fff;
-    width: 320px;
+    width: auto;
     padding: 16px 4px 16px 0;
     border-radius: 6px;
     font-size: 13px;
     box-shadow: 10px 10px 40px -14px #000
 }
 
-span {
-    margin: 0 5px 0 15px
+a {
+    margin: 0 5px 0 15px;
+    text-decoration: none;
+    color: #ddd;
 }

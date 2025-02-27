@@ -11,9 +11,10 @@
 <nav id='menu'>
     <input type='checkbox' id='responsive-menu'><label></label>
     <ul>
-        <li><a href='http://'>Save User</a></li>
-        <li><a href='http://'>User Alls</a></li>
+        <li><a th:href="@{/saveUser}">Save User</a></li>
+        <li><a th:href="@{/users}">User Alls</a></li>
     </ul>
+
 </nav>
 
 <h1 th:text="${subtitle}"></h1>
