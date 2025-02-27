@@ -14,12 +14,14 @@
     <label for="firstName"> First Name:</label>
     <input id="firstName"
            placeholder="Por favor ingresar su Nombres"
-           th:field="*{firstName}">
+           th:field="*{firstName}"
+           required="required">
 
     <label for="lastName"> Last Name:</label>
     <input id="lastName"
            placeholder="Por favor ingresar sus Apellidos"
-           th:field="*{lastName}">
+           th:field="*{lastName}"
+           required="required">
 
     <input class="buttonSend" type="submit" value="Send">
     <div>
