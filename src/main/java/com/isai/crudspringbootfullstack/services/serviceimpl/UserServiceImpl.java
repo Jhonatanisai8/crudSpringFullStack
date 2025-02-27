@@ -16,7 +16,7 @@ public class UserServiceImpl
     private UserRepository repository;
 
     @Override
-    public List<User> findAll() {
+    public List<User> findAllUsers() {
         return repository.findAll();
     }
 }
