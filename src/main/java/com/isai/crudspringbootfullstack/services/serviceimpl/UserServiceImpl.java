@@ -19,4 +19,9 @@ public class UserServiceImpl
     public List<User> findAllUsers() {
         return repository.findAll();
     }
+
+    @Override
+    public User saveUser(User user) {
+        return repository.save(user);
+    }
 }
