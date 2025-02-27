@@ -9,12 +9,15 @@
 <body>
 <h1 th:text="${subtitle}"></h1>
 <table id="customers">
-    <tr class="headerTable">
-        <th>Id</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Actions</th>
-    </tr>
+
+    <div class="headerTable">
+        <tr>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Actions</th>
+        </tr>
+    </div>
 
     <tbody>
     <tr th:each="user : ${usersFrontend}">
