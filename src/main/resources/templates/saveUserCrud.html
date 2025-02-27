@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${title}"></title>
+    <link rel="stylesheet" th:href="@{/css/styleForm.css}"/>
+</head>
+<body>
+<form class="form" action="/saveUser"
+      method="post"
+      th:object="${user}">
+    <h2>Information User</h2>
+
+    <label for="firstName"> First Name:</label>
+    <input id="firstName"
+           placeholder="Por favor ingresar su Nombres"
+           th:field="*{firstName}">
+
+    <label for="lastName"> Last Name:</label>
+    <input id="lastName"
+           placeholder="Por favor ingresar sus Apellidos"
+           th:field="*{lastName}">
+
+    <input class="buttonSend" type="submit" value="Send">
+    <div>
+        <span class="fa fa-phone"></span>001 1023 567
+        <span class="fa fa-envelope-o"></span> contact@company.com
+    </div>
+</form>
+</body>
+</html>

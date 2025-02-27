@@ -5,14 +5,13 @@ import com.isai.crudspringbootfullstack.services.serviceimpl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.support.SessionStatus;
 
 import java.util.List;
 
 @Controller
+@SessionAttributes("user")
 public class UserController {
 
     @Autowired
@@ -29,9 +28,19 @@ public class UserController {
         return "usersCrud";
     }
 
+    @GetMapping("/saveUser")
+    public String formSaveUser(Model model) {
+        String title = "Save User";
+        model.addAttribute("title", title);
+        model.addAttribute("user", new User());
+        return "saveUserCrud";
+    }
+
     @PostMapping("/saveUser")
-    public String saveUser(@ModelAttribute User user) {
+    public String saveUser(User user, Model model, SessionStatus status) {
         service.saveUser(user);
+        model.addAttribute("user", user);
+        status.setComplete();
         return "redirect:/users";
     }
 
